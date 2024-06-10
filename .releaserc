@@ -1,0 +1,32 @@
+{
+  "branches": [
+    "master",
+    "1.x",
+    {
+      "name": "beta",
+      "prerelease": true
+    }
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "zip -r '/tmp/release.zip' ./Hook README.md"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "/tmp/release.zip",
+            "name": "fiscomm-api-client-${nextRelease.version}.zip",
+            "label": "FisComm API Client v${nextRelease.version}"
+          }
+        ]
+      }
+    ]
+  ]
+}

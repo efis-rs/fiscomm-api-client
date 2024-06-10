@@ -1,0 +1,62 @@
+{
+  "name": "efis/fiscomm-api-client",
+  "description": "Fiscomm API Client",
+  "license": "MIT",
+  "type": "library",
+  "keywords": [
+    "fiscomm",
+    "purs",
+    "fiscalization",
+    "api",
+    "client"
+  ],
+  "homepage": "https://fiscomm.efis.rs",
+  "support": {
+    "email": "podrska@efis.rs",
+    "issues": "https://github.com/efis/fiscomm-api-client/issues",
+    "docs": "https://fiscomm.efis.rs"
+  },
+  "funding": [
+    {
+      "type": "eFis",
+      "url": "https://efis.rs/pretplati-se"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Sibin Grašič",
+      "email": "sibin.grasic@oblak.studio",
+      "homepage": "https://sib.ing",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "ext-json": "*",
+    "php-http/client-common": "^2.3",
+    "php-http/discovery": "^1.12",
+    "php-http/httplug": "^2.2",
+    "php-http/multipart-stream-builder": "^1.1.2",
+    "psr/http-client-implementation": "^1.0",
+    "psr/http-factory-implementation": "^1.0",
+    "psr/http-message": "^1.0|^2.0"
+  },
+  "require-dev": {
+    "guzzlehttp/guzzle": "^7.8",
+    "oblak/wordpress-coding-standard": "^1.1",
+    "symfony/var-dumper": "^6.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fiscomm\\": "src"
+    }
+  },
+  "minimum-stability": "beta",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "php-http/discovery": false
+    }
+  }
+}
