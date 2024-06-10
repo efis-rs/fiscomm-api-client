@@ -1,7 +1,7 @@
 # FisComm API Client
 
-![Packagist Version](https://img.shields.io/packagist/v/efis-rs/fiscomm-api-client)
-![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/efis-rs/fiscomm-api-client/php)
+![Packagist Version](https://img.shields.io/packagist/v/efis/fiscomm-api-client)
+![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/efis/fiscomm-api-client/php)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
 
