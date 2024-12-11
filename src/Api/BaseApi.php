@@ -57,7 +57,7 @@ abstract class BaseApi
     /**
      * Create a JSON encoded version of an array of parameters.
      *
-     * @param array $parameters Request parameters
+     * @param array $params Request parameters
      *
      * @return string|null
      */

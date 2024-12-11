@@ -25,7 +25,7 @@ class Create extends BaseApi
             \array_values($args),
         );
 
-        return \array_filter($args);
+        return \array_filter($args, static fn($v) => null !== $v);
     }
 
     /**
@@ -48,6 +48,8 @@ class Create extends BaseApi
      * @param  string|null   $cashier   Cashier name.
      * @param  string|null   $buyerId   Buyer ID.
      * @param  string|null   $buyerCcId Buyer cost center ID.
+     * @param  string|null   $refDocNo  Reference document number.
+     * @param  string|null   $refDocDt  Reference document date.
      * @param  array|null    $options   Additional options.
      *
      * @return array{
@@ -93,6 +95,8 @@ class Create extends BaseApi
         ?string $cashier = 'Продавац',
         ?string $buyerId = null,
         ?string $buyerCcId = null,
+        ?string $refDocNo = null,
+        ?string $refDocDt = null,
         ?array $options = null,
     ): array {
         $args = $this->remapCreateArgs(
@@ -103,11 +107,11 @@ class Create extends BaseApi
                 'cashier',
                 'buyerId',
                 'buyerCcId',
+                'refDocNo',
+                'refDocDt',
                 'options',
             ),
         );
-
-
 
         return $this->post($this->buildPath($invType, 'sale'), $args);
     }

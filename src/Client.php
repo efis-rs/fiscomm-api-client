@@ -64,12 +64,13 @@ class Client
 
     public static function withHttpClient(ClientInterface $client): static
     {
+        // @phpstan-ignore new.static
         return new static((new Builder($client)));
     }
 
     protected function getBaseUrl(?string $baseUrl): \Psr\Http\Message\UriInterface
     {
-        return PsrFinder::findUriFactory()->createUri($baseUrl ?? static::BASE_URL);
+        return PsrFinder::findUriFactory()->createUri($baseUrl ?? self::BASE_URL);
     }
 
     /**

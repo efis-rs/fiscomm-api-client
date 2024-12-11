@@ -26,6 +26,7 @@ class Builder
 
     private $plugins = array();
 
+    // @phpstan-ignore property.onlyRead
     private $cache;
 
     private $headers = array();

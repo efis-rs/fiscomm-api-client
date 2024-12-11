@@ -56,7 +56,6 @@ class Invoice extends BaseApi
      *
      * @param  'NORMAL'|'PROFORMA'|'COPY'|'TRAINING'|'ADVANCE' $invoiceType     Invoice type.
      * @param  'SALE'|'REFUND'                                 $transactionType Transaction type.
-     * @param  int|null                                        $limit           Limit the number of invoices.
      * @return array
      */
     public function all(string $invoiceType = 'NORMAL', string $transactionType = 'SALE'): array
@@ -80,7 +79,7 @@ class Invoice extends BaseApi
      *  total_amount_less_then?: float,
      *  page?: int,
      *  per_page?: int,
-     *  sort: 'sdc_date_time' | 'total_amount' | 'invoice_number_pos' | 'id' | '-sdc_date_time' | '-total_amount' | '-invoice_number_pos' | '-id'
+     *  sort?: 'sdc_date_time' | 'total_amount' | 'invoice_number_pos' | 'id' | '-sdc_date_time' | '-total_amount' | '-invoice_number_pos' | '-id'
      * } $params
      * @return array{
      *  current_page: int,
